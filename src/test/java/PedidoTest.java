@@ -31,6 +31,13 @@ public class PedidoTest {
         Pedido pedido = new Pedido("", "", 10, 50.5, java.time.LocalDate.now());
         assertEquals("Debe ingresar todos los datos requeridos", pedido.validar());
     }
+
+    @Test
+    void fechaInvalida() {
+        Pedido pedido = new Pedido("P123", "Carlos", 10, 50.5,
+                java.time.LocalDate.of(2020, 1, 1));
+        assertEquals("La fecha del pedido debe ser la fecha actual", pedido.validar());
+    }
 }
 
 
