@@ -25,6 +25,8 @@ public class PedidoTest {
         Pedido pedido = new Pedido("P123", "Carlos", 10, -5.0, java.time.LocalDate.now());
         assertEquals("El monto total debe ser mayor a cero", pedido.validar());
     }
+
+
 }
 
 
