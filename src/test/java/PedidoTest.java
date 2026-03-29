@@ -26,7 +26,11 @@ public class PedidoTest {
         assertEquals("El monto total debe ser mayor a cero", pedido.validar());
     }
 
-
+    @Test
+    void camposVacios() {
+        Pedido pedido = new Pedido("", "", 10, 50.5, java.time.LocalDate.now());
+        assertEquals("Debe ingresar todos los datos requeridos", pedido.validar());
+    }
 }
 
 
